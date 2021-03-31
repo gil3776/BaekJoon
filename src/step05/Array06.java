@@ -18,17 +18,14 @@ public class Array06 {
 		for(int i=0 ; i<n ; i++) {
 			String[] x = br.readLine().split("");
 			for(int j=0 ; j<x.length ; j++) {
-				if(x[j].equals("o")) {
+				if(x[j].equals("o") || x[j].equals("O")) {
 					cnt[i] += point;
-					if(x[j+1]=="0" && j<x.length-1) {
-						point++;
-					}
+					point++;
 				}else {
 					point = 1;
 				}
 			}
-			System.out.println(i);
-			System.out.println(cnt[i]);
+			point = 1;
 		}
 		
 		for(int i=0 ; i<n ; i++) {
